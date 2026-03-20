@@ -2,8 +2,7 @@ version: '3.8'
 
 services:
   app:
-    build: .
-    volumes:
-      - ./app:/app
-      
-    command: make test
+    image: zholnik/devops-for-developers-project-74
+    build:
+      context: .
+      dockerfile: Dockerfile.production
